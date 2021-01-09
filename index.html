@@ -1,0 +1,349 @@
+<html>
+<head>
+<title>pantea's studio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+    <style type="text/css">
+  body {
+      margin:40px auto;
+      font-family: "courier", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      max-width:1200px;
+      line-height:1.4;
+      font-size:15x;
+      color:black;
+      padding:0 
+  }
+        mark {
+    background-color: #e1d9cf;
+    color: black;
+  }
+
+  h1,h2,h3{
+      line-height:1.2
+  }
+
+  a:link, a:visited {
+      color: rgb(128,128,128);
+      text-decoration: none;
+  }
+
+  a:hover, a:active {
+      color: black;
+      text-decoration: none;
+  }
+        .container {
+    position: relative;
+    text-align: justify;
+    color: black;
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    </style>
+  
+<style type="text/css">
+      #container {
+        height: 100%;
+        vertical-align: middle;
+        width: 100%;
+      }
+      #clock {
+        fill: #ebebeb;
+        stroke: #000;
+        stroke-linecap: round;
+      }
+      #surface, #h_pointer {
+        stroke-width: 5px;
+      }
+      #delimiters, #s_pointer {
+        stroke-width: 1px;
+      }
+      #m_pointer {
+        stroke-width: 3px;
+      }
+      #numbers {
+        font-family: sans-serif;
+        font-size: 80%;
+      }
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 15px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+        
+</style>
+<script>
+$(function () {
+$('#myImg').on('click', function () {
+$(this).width($(this).width() * 2);
+});
+})
+</script>
+ <script src="jquery.js" type="text/javascript"></script>
+<body bgcolor="#929292" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <table id="Table_01" width="1066" height="943" border="0" cellpadding="0" cellspacing="0">
+	<tr> <center>quick access >> <mark>about</mark> | <mark>CV</mark> | <mark>portfolio</mark> | <mark>wetlands related projects</mark> | <mark>teaching experience</mark> | <mark>photography store</mark></center>
+<td colspan="6" rowspan="5">
+            <img src="images/01-plant.png" width="486" height="397" alt=""></td>
+		<td colspan="11">
+			<div class="container"><img src="images/02-upwindow.png" width="579" height="89" alt="">
+		<td>
+			<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="6" rowspan="2">
+			<a href="cp.html"><img src="images/03-window.gif" width="277" height="217" alt="Current Project"></a></td>
+		<td rowspan="7">
+			<img src="images/04.png" width="26" height="419" alt=""></td>
+		<td width="276" height="183" colspan="4">
+<br>&nbsp;&nbsp;&nbsp;<html lang="en-US">
+ <script language="javascript" type="text/javascript">
+      function timerTick() {
+        with (new Date()) {
+          var h, m, s;
+          var local_time = getTime();
+          var offset = getTimezoneOffset() * 60000;
+          var iran_offset = 4.5 * 60000 * 60;
+          var my_time = local_time + (iran_offset + offset);
+          var display_date = new Date(my_time);
+          h = 30 * ((display_date.getHours() % 12) + display_date.getMinutes() / 60);
+          m = 6 * display_date.getMinutes();
+          s = 6 * display_date.getSeconds();
+
+          document.getElementById('h_pointer').setAttribute('transform', 'rotate(' + h + ', 50, 50)');
+          document.getElementById('m_pointer').setAttribute('transform', 'rotate(' + m + ', 50, 50)'); 
+          document.getElementById('s_pointer').setAttribute('transform', 'rotate(' + s + ', 50, 50)');
+          
+          setTimeout(timerTick, 1000);
+        }
+      }
+    </script>
+  <body onload='timerTick()'>
+    <noscript><div id='box'>Please, enable JavaScript and refresh page.</div></noscript>
+          <svg id='clock' width='100' height='100'>
+            <circle id='surface' cx='50' cy='50' r='45'/>
+            <g id='pointers'>
+              <line id='h_pointer' x1='50' y1='50' x2='50' y2='27' />
+              <line id='m_pointer' x1='50' y1='50' x2='50' y2='17' />
+              <line id='s_pointer' x1='50' y1='50' x2='50' y2='13' />
+            </g>
+            <g id='numbers'>
+              <text x='35' y='20'>TIME</text>
+              <text x='75' y='54'>~</text>
+              <text x='33' y='87'>ZONE</text>
+              <text x='9' y='54'>MY</text>
+            </g>
+          </svg>
+    
+		<td>
+            <img src="images/spacer.gif" width="1" height="183" alt=""></td>
+	<tr>
+		<td colspan="2" rowspan="6">
+			<a href="videodesign.html"><img src="images/06-computer.gif" width="179" height="236" alt="" style="cursor: progress"></a></td>
+		<td colspan="2" rowspan="8">
+			<img src="images/07-right.png" width="97" height="360" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="34" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="6">
+			<img src="images/08-alaki.png" width="277" height="39" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="39" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2">
+			<a href="visualarts.html"><img src="images/09-frame.gif" width="72" height="82" alt="Visual Arts"></a></td>
+		<td colspan="4" rowspan="2">
+            <a href="sound.html"><img src="images/10-tape.gif" width="205" height="82" alt="Sounds"></a></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="52" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="4">
+			<img src="images/11-plain.png" width="101" height="164" alt=""></td>
+		<td colspan="4" rowspan="4">
+			<img src="images/12-plant2.png" width="230" height="164" alt=""></td>
+		<td rowspan="3">
+			<img src="images/13-catondesk.png" width="155" height="111" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="30" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<img src="images/14-desk.png" width="17" height="81" alt=""></td>
+		<td colspan="2">
+			<a href="teachingexperience.html"><img src="images/15-tea.png" width="70" height="61" alt=""></a></td>
+		<td rowspan="2">
+			<img src="images/16-desk.png" width="38" height="81" alt=""></td>
+		<td rowspan="2" background="images/17-paper.png">
+
+<div class="w3-container">
+<img src="images/17-paper-overlay.png" style="width:150%;cursor:zoom-in"
+  onclick="document.getElementById('modal01').style.display='block'">
+
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+      <img src="abouttest.png" style="width:100%">
+    </div>
+  </div>
+</div>
+</td>
+		<td rowspan="2">
+			<img src="images/18-desk.png" width="65" height="81" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="61" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="images/19-desk.png" width="70" height="20" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="20" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="10" rowspan="2">
+			<img src="images/20-desk.png" width="637" height="124" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="53" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3" rowspan="2">
+			<img src="images/21-plain.png" width="217" height="145" alt=""></td>
+		<td rowspan="2">
+			<img src="images/22-plain2.png" width="39" height="145" alt=""></td>
+		<td rowspan="2">
+            <a href="tnx.html"><img src="images/23-sphinx.gif" width="75" height="145" alt=""></a></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="71" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="9" rowspan="3">
+			<img src="images/24-rug.png" width="516" height="310" alt=""></td>
+		<td colspan="2" rowspan="2"> <div class="container">
+
+			<a href="teachingexperience.html"><img src="images/25-dogs.gif" width="164" height="180" alt="" class="image"> <div class="overlay">portfolio</div>
+</div></a></td>
+		<td rowspan="3">
+			<img src="images/26-plain.png" width="54" height="310" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="74" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2">
+			<img src="images/27-plain.png" width="162" height="236" alt=""></td>
+		<td colspan="3" rowspan="2">
+			<img src="images/28-rug.png" width="169" height="236" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="106" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="images/29-plain.png" width="164" height="130" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="130" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="101" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="61" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="55" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="39" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="75" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="155" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="17" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="55" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="15" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="38" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="87" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="65" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="26" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="58" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="121" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="43" height="1" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="54" height="1" alt=""></td>
+
+          </tr></table><CENTER><mark>#VIDEODESIGN #MOTIONGRAPHICS #EDIT #GRAPHICS #SOUNDDESIGN</mark><br><br><img src="images/instagram.png" width="20">&nbsp&nbsp<img src="images/twitter.png" width="20">&nbsp&nbsp<img src="images/link.png"  width="20">&nbsp&nbsp<img src="images/soundcloud.png"  width="20">&nbsp&nbsp<img src="images/email.png"  width="20"></CENTER>
+</svg>
+            </body></html>
+            		

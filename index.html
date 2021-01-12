@@ -1,173 +1,196 @@
-<html>
-<head>
-<title>pantea's studio</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<html>
+	<head>
+	<title>pantea's studio</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-</head>
-<body>
-    <style type="text/css">
-  body {
-      margin:40px auto;
-      font-family: "courier", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      max-width:1200px;
-      line-height:1.4;
-      font-size:15x;
-      color:black;
-      padding:0 
-  }
-        mark {
-    background-color: #e1d9cf;
-    color: black;
-  }
+	</head>
+	<body>
+	    <style type="text/css">
+	  body {
+	      margin:40px auto;
+	      font-family: "courier", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	      max-width:1200px;
+	      line-height:1.4;
+	      font-size:15x;
+	      color:black;
+	      background-color: #a1a1a1;
+	      padding:0 
+	  }
+	        mark {
+	    background-color: #e1d9cf;
+	    color: black;
+	  }
 
-  h1,h2,h3{
-      line-height:1.2
-  }
+	  h1,h2,h3{
+	      line-height:1.2
+	  }
 
-  a:link, a:visited {
-      color: rgb(128,128,128);
-      text-decoration: none;
-  }
+	  a:link, a:visited {
+	      color: rgb(128,128,128);
+	      text-decoration: none;
+	  }
 
-  a:hover, a:active {
-      color: black;
-      text-decoration: none;
-  }
-        .container {
-    position: relative;
-    text-align: justify;
-    color: black;
-}
+	  a:hover, a:active {
+	      color: black;
+	      text-decoration: none;
+	  }
+	        .container {
+	    position: relative;
+	    text-align: justify;
+	    color: black;
+	  }
 
-/* Bottom left text */
-.bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-}
+	  h1 {text-align: center;
+	}
 
-/* Top left text */
-.top-left {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
+	/* Bottom left text */
+	.bottom-left {
+	    position: absolute;
+	    bottom: 8px;
+	    left: 16px;
+	}
 
-/* Top right text */
-.top-right {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
+	/* Top left text */
+	.top-left {
+	    position: absolute;
+	    top: 0px;
+	    left: 0px;
+	}
 
-/* Bottom right text */
-.bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-}
+	/* Top right text */
+	.top-right {
+	    position: absolute;
+	    top: 0px;
+	    right: 0px;
+	}
 
-/* Centered text */
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-    </style>
-  
-<style type="text/css">
-      #container {
-        height: 100%;
-        vertical-align: middle;
-        width: 100%;
-      }
-      #clock {
-        fill: #ebebeb;
-        stroke: #000;
-        stroke-linecap: round;
-      }
-      #surface, #h_pointer {
-        stroke-width: 5px;
-      }
-      #delimiters, #s_pointer {
-        stroke-width: 1px;
-      }
-      #m_pointer {
-        stroke-width: 3px;
-      }
-      #numbers {
-        font-family: sans-serif;
-        font-size: 80%;
-      }
-* {box-sizing: border-box}
+	/* Bottom right text */
+	.bottom-right {
+	    position: absolute;
+	    bottom: 8px;
+	    right: 16px;
+	}
 
-/* Container needed to position the overlay. Adjust the width as needed */
-.container {
-  position: relative;
-}
+	/* Centered text */
+	.centered {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	}
+	    </style>
 
-/* Make the image to responsive */
-.image {
-  display: block;
-}
-
-/* The overlay effect - lays on top of the container and over the image */
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1;
-  width: 100%;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 15px;
-  padding: 15px;
+	    <style>
+.button {
+  border: none;
+  color: black;
+  padding: 15px 32px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
-/* When you mouse over the container, fade in the overlay title */
-.container:hover .overlay {
-  opacity: 1;
-}
-        
+.button1 {background-color: #dbdac6;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
 </style>
-<script>
-$(function () {
-$('#myImg').on('click', function () {
-$(this).width($(this).width() * 2);
-});
-})
-</script>
- <script src="jquery.js" type="text/javascript"></script>
-<body bgcolor="#929292" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-    <table id="Table_01" width="1066" height="943" border="0" cellpadding="0" cellspacing="0">
-	<tr> <center>quick access >> <mark>about</mark> | <mark>CV</mark> | <mark>portfolio</mark> | <mark>wetlands related projects</mark> | <mark>teaching experience</mark> | <mark>photography store</mark></center>
-<td colspan="6" rowspan="5">
-            <img src="images/01-plant.png" width="486" height="397" alt=""></td>
-		<td colspan="11">
-			<div class="container"><img src="images/02-upwindow.png" width="579" height="89" alt="">
-		<td>
-			<img src="images/spacer.gif" width="1" height="1" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="6" rowspan="2">
-			<a href="cp.html"><img src="images/03-window.gif" width="277" height="217" alt="Current Project"></a></td>
-		<td rowspan="7">
-			<img src="images/04.png" width="26" height="419" alt=""></td>
-		<td width="276" height="183" colspan="4">
-<br>&nbsp;&nbsp;&nbsp;<html lang="en-US">
+	  
+	<style type="text/css">
+	      #container {
+	        height: 100%;
+	        vertical-align: middle;
+	        width: 100%;
+	      }
+	      #clock {
+	        fill: #ebebeb;
+	        stroke: #000;
+	        stroke-linecap: round;
+	      }
+	      #surface, #h_pointer {
+	        stroke-width: 5px;
+	      }
+	      #delimiters, #s_pointer {
+	        stroke-width: 1px;
+	      }
+	      #m_pointer {
+	        stroke-width: 3px;
+	      }
+	      #numbers {
+	        font-family: sans-serif;
+	        font-size: 80%;
+	      }
+	* {box-sizing: border-box}
+
+	/* Container needed to position the overlay. Adjust the width as needed */
+	.container {
+	  position: relative;
+	}
+
+	/* Make the image to responsive */
+	.image {
+	  display: block;
+	}
+
+	/* The overlay effect - lays on top of the container and over the image */
+	.overlay {
+	  position: absolute;
+	  bottom: 0;
+	  background: rgb(0, 0, 0);
+	  background: rgba(0, 0, 0.5, 0.1); /* Black see-through */
+	  color: #f1f1f1;
+	  width: 100%;
+	  transition: .5s ease;
+	  opacity:0;
+	  color: white;
+	  font-size: 15px;
+	  padding: 15px;
+	  text-align: center;
+	}
+
+	/* When you mouse over the container, fade in the overlay title */
+	.container:hover .overlay {
+	  opacity: 1;
+	}
+	        
+	</style><script>
+	$(function () {
+	$('#myImg').on('click', function () {
+	$(this).width($(this).width() * 2);
+	});
+	})
+	</script>
+	 <script src="jquery.js" type="text/javascript"></script><a href="map.html"><button class="button button1">Site Map</button></a>
+	<body bgcolor="#929292" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	  <table id="Table_01" width="1074" height="872" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td colspan="4" rowspan="7">
+				<img src="images/Untitled1-Recovered-Recovered_01.png" width="395" height="397" alt=""></td>
+			<td colspan="3" rowspan="7">
+				<img src="images/Untitled1-Recovered-Recovered_02.png" width="101" height="397" alt=""></td>
+			<td colspan="4" rowspan="5">
+				<img src="images/Untitled1-Recovered-Recovered_03.png" width="41" height="316" alt=""></td>
+			<td colspan="19">
+				<img src="images/Untitled1-Recovered-Recovered_04.png" width="536" height="42" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="42" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="12">
+				<img src="images/Untitled1-Recovered-Recovered_05.gif" width="280" height="1" alt=""></td>
+			<td colspan="7" rowspan="2"><div class="container">
+				<img src="images/Untitled1-Recovered-Recovered_06.png" width="256" height="216" alt=""><div class="centered">
+<html lang="en-US">
  <script language="javascript" type="text/javascript">
       function timerTick() {
         with (new Date()) {
           var h, m, s;
           var local_time = getTime();
           var offset = getTimezoneOffset() * 60000;
-          var iran_offset = 4.5 * 60000 * 60;
+          var iran_offset = 3.5 * 60000 * 60;
           var my_time = local_time + (iran_offset + offset);
           var display_date = new Date(my_time);
           h = 30 * ((display_date.getHours() % 12) + display_date.getMinutes() / 60);
@@ -197,153 +220,301 @@ $(this).width($(this).width() * 2);
               <text x='33' y='87'>ZONE</text>
               <text x='9' y='54'>MY</text>
             </g>
-          </svg>
-    
-		<td>
-            <img src="images/spacer.gif" width="1" height="183" alt=""></td>
-	<tr>
-		<td colspan="2" rowspan="6">
-			<a href="videodesign.html"><img src="images/06-computer.gif" width="179" height="236" alt="" style="cursor: progress"></a></td>
-		<td colspan="2" rowspan="8">
-			<img src="images/07-right.png" width="97" height="360" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="1" height="34" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="6">
-			<img src="images/08-alaki.png" width="277" height="39" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="1" height="39" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="2" rowspan="2">
-			<a href="visualarts.html"><img src="images/09-frame.gif" width="72" height="82" alt="Visual Arts"></a></td>
-		<td colspan="4" rowspan="2">
-            <a href="sound.html"><img src="images/10-tape.gif" width="205" height="82" alt="Sounds"></a></td>
-		<td>
-			<img src="images/spacer.gif" width="1" height="52" alt=""></td>
-	</tr>
-	<tr>
-		<td rowspan="4">
-			<img src="images/11-plain.png" width="101" height="164" alt=""></td>
-		<td colspan="4" rowspan="4">
-			<img src="images/12-plant2.png" width="230" height="164" alt=""></td>
-		<td rowspan="3">
-			<img src="images/13-catondesk.png" width="155" height="111" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="1" height="30" alt=""></td>
-	</tr>
-	<tr>
-		<td rowspan="2">
-			<img src="images/14-desk.png" width="17" height="81" alt=""></td>
-		<td colspan="2">
-			<a href="teachingexperience.html"><img src="images/15-tea.png" width="70" height="61" alt=""></a></td>
-		<td rowspan="2">
-			<img src="images/16-desk.png" width="38" height="81" alt=""></td>
-		<td rowspan="2" background="images/17-paper.png">
+          </svg></div></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="12">
+				<a href="https://pantea-likes-sundew.tumblr.com/" target="_blank"><div class="container">
+					<img src="images/Untitled1-Recovered_05.gif" width="280" height="215" border="0" alt="Wetland-Related Projects" class="image"> <div class="overlay">Wetland-Related Projects</div></a></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="215" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="12" rowspan="2">
+				<img src="images/Untitled1-Recovered-Recovered_08.gif" width="280" height="58" alt=""></td>
+			<td colspan="5">
+				<img src="images/Untitled1-Recovered-Recovered_09.gif" width="186" height="13" alt=""></td>
+			<td colspan="2" rowspan="9">
+				<img src="images/Untitled1-Recovered-Recovered_10.png" width="70" height="171" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="13" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<img src="images/Untitled1-Recovered-Recovered_11.gif" width="14" height="45" alt=""></td>
+			<td colspan="2" rowspan="9">
+			<a href="videodesign.html">
+					<img src="images/Untitled1-Recovered_11.gif" width="162" height="159" border="0" alt="Video Art"></a></td>
+			<td rowspan="8">
+				<img src="images/Untitled1-Recovered-Recovered_13.gif" width="10" height="158" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="45" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="6">
+				<img src="images/Untitled1-Recovered_13.gif" width="68" height="1" alt=""></td>
+			<td rowspan="2">
+				<img src="images/Untitled1-Recovered-Recovered_15.gif" width="23" height="81" alt=""></td>
+			<td colspan="8">
+				<img src="images/Untitled1-Recovered_15.gif" width="143" height="1" alt=""></td>
+			<td colspan="2" rowspan="7">
+				<img src="images/Untitled1-Recovered-Recovered_17.gif" width="88" height="113" alt=""></td>
+			<td rowspan="7">
+				<img src="images/Untitled1-Recovered-Recovered_18.gif" width="13" height="113" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+		</tr>
+		<tr>
+			<td rowspan="5">
+				<img src="images/Untitled1-Recovered_13-20.gif" width="1" height="104" alt=""></td>
+			<td colspan="5">
+				<a href="visualarts.html">
+					<img src="images/Untitled1-Recovered-Recovered_20.gif" width="67" height="80" border="0" alt="Visual Arts"></a></td>
+			<td rowspan="4">
+				<img src="images/Untitled1-Recovered_15-22.gif" width="1" height="103" alt=""></td>
+			<td colspan="6" rowspan="2">
+				<a href="sound.html">
+					<img src="images/Untitled1-Recovered-Recovered_22.gif" width="141" height="81" border="0" alt="Sound"></a></td>
+			<td rowspan="5">
+				<img src="images/Untitled1-Recovered_15-24.gif" width="1" height="104" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="80" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="4" rowspan="9">
+				<img src="images/Untitled1-Recovered-Recovered_24.png" width="395" height="85" alt=""></td>
+			<td colspan="3" rowspan="9"><div class="container"><a href="teachingexperience.html">
+				<img src="images/Untitled1-Recovered-Recovered_25.gif" width="101" height="85" alt="do the last thing first" class="image"> <div class="overlay">Teaching Experience</div></a></td>
+			<td colspan="5" rowspan="4">
+				<img src="images/Untitled1-Recovered_13-27.gif" width="67" height="24" alt=""></td>
+			<td rowspan="2">
+				<img src="images/Untitled1-Recovered-Recovered_27.gif" width="23" height="16" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="6" rowspan="2">
+				<img src="images/Untitled1-Recovered_15-29.gif" width="141" height="22" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="15" alt=""></td>
+		</tr>
+		<tr>
+			<td>
+				<img src="images/Untitled1-Recovered-Recovered_29.gif" width="23" height="7" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="7" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				
+					<img src="images/Untitled1-Recovered_24.gif" width="39" height="1" border="0" alt=""></td>
+			<td colspan="4">
+				<img src="images/Untitled1-Recovered_15-32.gif" width="126" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="5">
+				<img src="images/Untitled1-Recovered-Recovered_32.gif" width="15" height="61" alt=""></td>
+			<td rowspan="5">
+				<img src="images/Untitled1-Recovered-Recovered_33.gif" width="19" height="61" alt=""></td>
+			<td rowspan="5">
+				<img src="images/Untitled1-Recovered-Recovered_34.gif" width="7" height="61" alt=""></td>
+			<td rowspan="6">
+				
+					<img src="images/Untitled1-Recovered_24-36.gif" width="1" height="62" border="0" alt=""></td>
+			<td colspan="4" rowspan="3"><a href="https://ko-fi.com/pantearm" target="_blank">
+				<img src="images/Untitled1-Recovered-Recovered_36.gif" width="64" height="47" alt="Teaching Experience"></A></td>
+			<td rowspan="6">
+				
+					<img src="images/Untitled1-Recovered_24-38.gif" width="1" height="62" border="0" alt=""></td>
+			<td>
+				<img src="images/Untitled1-Recovered-Recovered_38.gif" width="19" height="8" alt=""></td>
+			<td rowspan="4" background="images/17-paper.png">
+	<div class="w3-container">
+				<img src="images/17-paper-overlay.png" alt="About" style="width:128%;height:109%;cursor:zoom-in"
+	  onclick="document.getElementById('modal01').style.display='block'">
 
-<div class="w3-container">
-<img src="images/17-paper-overlay.png" style="width:150%;cursor:zoom-in"
-  onclick="document.getElementById('modal01').style.display='block'">
-
-  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom">
-      <img src="abouttest.png" style="width:100%">
-    </div>
-  </div>
-</div>
-</td>
-		<td rowspan="2">
-			<img src="images/18-desk.png" width="65" height="81" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="1" height="61" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<img src="images/19-desk.png" width="70" height="20" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="1" height="20" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="10" rowspan="2">
-			<img src="images/20-desk.png" width="637" height="124" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="1" height="53" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="3" rowspan="2">
-			<img src="images/21-plain.png" width="217" height="145" alt=""></td>
-		<td rowspan="2">
-			<img src="images/22-plain2.png" width="39" height="145" alt=""></td>
-		<td rowspan="2">
-            <a href="tnx.html"><img src="images/23-sphinx.gif" width="75" height="145" alt=""></a></td>
-		<td>
-			<img src="images/spacer.gif" width="1" height="71" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="9" rowspan="3">
-			<img src="images/24-rug.png" width="516" height="310" alt=""></td>
-		<td colspan="2" rowspan="2"> <div class="container">
-
-			<a href="teachingexperience.html"><img src="images/25-dogs.gif" width="164" height="180" alt="" class="image"> <div class="overlay">portfolio</div>
-</div></a></td>
-		<td rowspan="3">
-			<img src="images/26-plain.png" width="54" height="310" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="1" height="74" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="2" rowspan="2">
-			<img src="images/27-plain.png" width="162" height="236" alt=""></td>
-		<td colspan="3" rowspan="2">
-			<img src="images/28-rug.png" width="169" height="236" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="1" height="106" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<img src="images/29-plain.png" width="164" height="130" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="1" height="130" alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="images/spacer.gif" width="101" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="61" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="55" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="39" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="75" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="155" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="17" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="55" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="15" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="38" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="87" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="65" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="26" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="58" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="121" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="43" height="1" alt=""></td>
-		<td>
-			<img src="images/spacer.gif" width="54" height="1" alt=""></td>
-
-          </tr></table><CENTER><mark>#VIDEODESIGN #MOTIONGRAPHICS #EDIT #GRAPHICS #SOUNDDESIGN</mark><br><br><img src="images/instagram.png" width="20">&nbsp&nbsp<img src="images/twitter.png" width="20">&nbsp&nbsp<img src="images/link.png"  width="20">&nbsp&nbsp<img src="images/soundcloud.png"  width="20">&nbsp&nbsp<img src="images/email.png"  width="20"></CENTER>
-</svg>
-            </body></html>
-            		
+	  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+	    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+	    <div class="w3-modal-content w3-animate-zoom">
+	      <img src="abouttest.png" style="width:100%">
+	    </div>
+	  </div>
+	</div></td>
+			<td colspan="3">
+				<img src="images/Untitled1-Recovered-Recovered_40.gif" width="30" height="8" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="8" alt=""></td>
+		</tr>
+		<tr>
+			<td rowspan="6">
+				
+					<img src="images/Untitled1-Recovered_28.gif" width="19" height="81" border="0" alt=""></td>
+			<td rowspan="6">
+				
+					<img src="images/Untitled1-Recovered_28-43.gif" width="11" height="81" border="0" alt=""></td>
+			<td rowspan="4">
+				<img src="images/Untitled1-Recovered-Recovered_43.gif" width="18" height="53" alt=""></td>
+			<td colspan="4" rowspan="4">
+				<img src="images/Untitled1-Recovered-Recovered_44.gif" width="102" height="53" alt=""></td>
+			<td colspan="3" rowspan="4">
+				<img src="images/Untitled1-Recovered-Recovered_45.gif" width="80" height="53" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="3">
+				<img src="images/Untitled1-Recovered-Recovered_46.gif" width="162" height="52" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="38" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="4" rowspan="3">
+				
+					<img src="images/Untitled1-Recovered_24-48.gif" width="64" height="15" border="0" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="8" alt=""></td>
+		</tr>
+		<tr>
+			<td rowspan="3">
+				
+					<img src="images/Untitled1-Recovered_28-49.gif" width="78" height="34" border="0" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="6" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="6" rowspan="3">
+				<img src="images/Untitled1-Recovered-Recovered_49.png" width="482" height="83" alt=""></td>
+			<td colspan="5" rowspan="3">
+				<img src="images/Untitled1-Recovered-Recovered_50.gif" width="55" height="83" alt=""></td>
+			<td colspan="10" rowspan="3">
+				<img src="images/Untitled1-Recovered-Recovered_51.png" width="362" height="83" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="5" rowspan="2">
+				<img src="images/Untitled1-Recovered-Recovered_52.gif" width="65" height="82" alt=""></td>
+			<td>
+				
+					<img src="images/Untitled1-Recovered_28-54.gif" width="1" height="27" border="0" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="27" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<img src="images/Untitled1-Recovered-Recovered_54.gif" width="109" height="55" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="55" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="5">
+				<img src="images/Untitled1-Recovered-Recovered_55.gif" width="481" height="32" alt=""></td>
+			<td colspan="21">
+				<img src="images/Untitled1-Recovered-Recovered_56.png" width="386" height="32" alt=""></td>
+			<td colspan="3" rowspan="3"><div class="container">
+				<a href="https://www.behance.net/pantearm" target="_blank">
+					<img src="images/Untitled1-Recovered_36.gif" width="156" height="222" border="0" alt="portfolio" class="image"> <div class="overlay">Portfolio</div></a></td>
+			<td rowspan="3">
+				<img src="images/Untitled1-Recovered-Recovered_58.png" width="50" height="222" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="32" alt=""></td>
+		</tr>
+		<tr>
+			<td>
+				<img src="images/Untitled1-Recovered-Recovered_59.png" width="291" height="96" alt=""></td>
+			<td colspan="2">
+				<a href="Updated CV.pdf">
+					<img src="images/Untitled1-Recovered_39.gif" width="64" height="96" border="0" alt="CV"></a></td>
+			<td colspan="3" rowspan="2">
+				<img src="images/Untitled1-Recovered-Recovered_61.gif" width="127" height="190" alt=""></td>
+			<td colspan="20" rowspan="2">
+				<img src="images/Untitled1-Recovered-Recovered_62.gif" width="385" height="190" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="96" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<img src="images/Untitled1-Recovered-Recovered_63.png" width="355" height="94" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="94" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<img src="images/Untitled1-Recovered-Recovered_64.png" width="354" height="84" alt=""></td>
+			<td colspan="28">
+				<img src="images/Untitled1-Recovered-Recovered_65.gif" width="719" height="84" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="84" alt=""></td>
+		</tr>
+		<tr>
+			<td>
+				<img src="images/spacer.gif" width="291" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="63" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="40" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="86" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="14" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="14" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="19" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="7" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="26" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="23" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="14" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="19" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="78" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="11" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="18" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="87" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="13" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="36" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="126" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="10" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="20" height="1" alt=""></td>
+			<td>
+				<img src="images/spacer.gif" width="50" height="1" alt=""></td>
+			<td></td>
+		</tr>
+	</table>
+	<h1><a href="https://pantea.bandcamp.com/" target="_blank"><img src="images/bc-logo.png"  width="41"></a>&nbsp&nbsp<a href="https://twitter.com/pantearm" target="_blank"><img src="images/twitter.png" width="20"></a>&nbsp&nbsp<a href="https://instagram.com/pantearm" target="_blank"><img src="images/instagram.png" width="20"></a>&nbsp&nbsp<a href="mailto:pantea.arman@pm.me" target="_blank"><img src="images/email.png"  width="20"></a></h1>
+	</svg>
+	            </body></html>
+	            		

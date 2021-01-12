@@ -181,8 +181,46 @@
 		<tr>
 			<td colspan="12">
 				<img src="images/Untitled1-Recovered-Recovered_05.gif" width="280" height="1" alt=""></td>
-			<td colspan="7" rowspan="2">
-				<img src="images/Untitled1-Recovered-Recovered_06.png" width="256" height="216" alt=""></td>
+			<td colspan="7" rowspan="2"><div class="container">
+				<img src="images/Untitled1-Recovered-Recovered_06.png" width="256" height="216" alt=""><div class="centered">
+<html lang="en-US">
+ <script language="javascript" type="text/javascript">
+      function timerTick() {
+        with (new Date()) {
+          var h, m, s;
+          var local_time = getTime();
+          var offset = getTimezoneOffset() * 60000;
+          var iran_offset = 3.5 * 60000 * 60;
+          var my_time = local_time + (iran_offset + offset);
+          var display_date = new Date(my_time);
+          h = 30 * ((display_date.getHours() % 12) + display_date.getMinutes() / 60);
+          m = 6 * display_date.getMinutes();
+          s = 6 * display_date.getSeconds();
+
+          document.getElementById('h_pointer').setAttribute('transform', 'rotate(' + h + ', 50, 50)');
+          document.getElementById('m_pointer').setAttribute('transform', 'rotate(' + m + ', 50, 50)'); 
+          document.getElementById('s_pointer').setAttribute('transform', 'rotate(' + s + ', 50, 50)');
+          
+          setTimeout(timerTick, 1000);
+        }
+      }
+    </script>
+  <body onload='timerTick()'>
+    <noscript><div id='box'>Please, enable JavaScript and refresh page.</div></noscript>
+          <svg id='clock' width='100' height='100'>
+            <circle id='surface' cx='50' cy='50' r='45'/>
+            <g id='pointers'>
+              <line id='h_pointer' x1='50' y1='50' x2='50' y2='27' />
+              <line id='m_pointer' x1='50' y1='50' x2='50' y2='17' />
+              <line id='s_pointer' x1='50' y1='50' x2='50' y2='13' />
+            </g>
+            <g id='numbers'>
+              <text x='35' y='20'>TIME</text>
+              <text x='75' y='54'>~</text>
+              <text x='33' y='87'>ZONE</text>
+              <text x='9' y='54'>MY</text>
+            </g>
+          </svg></div></td>
 			<td>
 				<img src="images/spacer.gif" width="1" height="1" alt=""></td>
 		</tr>
@@ -294,18 +332,8 @@
 					<img src="images/Untitled1-Recovered_24-38.gif" width="1" height="62" border="0" alt=""></td>
 			<td>
 				<img src="images/Untitled1-Recovered-Recovered_38.gif" width="19" height="8" alt=""></td>
-			<td rowspan="4" background="images/17-paper.png">
-	<div class="w3-container">
-				<img src="images/17-paper-overlay.png" alt="About" style="width:128%;height:109%;cursor:zoom-in"
-	  onclick="document.getElementById('modal01').style.display='block'">
-
-	  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-	    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-	    <div class="w3-modal-content w3-animate-zoom">
-	      <img src="abouttest.png" style="width:100%">
-	    </div>
-	  </div>
-	</div></td>
+		<td rowspan="4">
+			<img src="images/Untitled1-Recovered-Recovered_39.gif" width="78" height="55" alt=""></td>
 			<td colspan="3">
 				<img src="images/Untitled1-Recovered-Recovered_40.gif" width="30" height="8" alt=""></td>
 			<td>

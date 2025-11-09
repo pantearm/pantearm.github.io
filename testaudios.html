@@ -1,0 +1,38 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expandable Audio Timeline</title>
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <style>
+    .word { cursor: pointer; color: blue; text-decoration: underline; }
+    #waveform { display: none; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <p>Click the word <span class="word" id="trigger">sound</span> to reveal the timeline.</p>
+  <div id="waveform"></div>
+
+  <script>
+    const waveform = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: '#999',
+      progressColor: '#555',
+      height: 80,
+    });
+
+    waveform.load('example.mp3');
+
+    document.getElementById('trigger').addEventListener('click', () => {
+      const wave = document.getElementById('waveform');
+      if (wave.style.display === 'none') {
+        wave.style.display = 'block';
+        waveform.play();
+      } else {
+        wave.style.display = 'none';
+        waveform.pause();
+      }
+    });
+  </script>
+</head>
+</html>

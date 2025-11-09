@@ -1,38 +1,45 @@
 
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Expandable Audio Timeline</title>
-  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <title>Expandable Audio Example</title>
   <style>
-    .word { cursor: pointer; color: blue; text-decoration: underline; }
-    #waveform { display: none; margin-top: 10px; }
+    .audio-container {
+      margin-top: 10px;
+      display: none;
+    }
+
+    .word {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+
+    .word:hover {
+      color: darkblue;
+    }
   </style>
 </head>
 <body>
-  <p>Click the word <span class="word" id="trigger">sound</span> to reveal the timeline.</p>
-  <div id="waveform"></div>
+  <p>
+    Click the word 
+    <span class="word" id="trigger">music</span> 
+    to hear the sound.
+  </p>
+
+  <div class="audio-container" id="audio-container">
+    <audio controls>
+      <source src="example.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 
   <script>
-    const waveform = WaveSurfer.create({
-      container: '#waveform',
-      waveColor: '#999',
-      progressColor: '#555',
-      height: 80,
-    });
-
-    waveform.load('example.mp3');
-
     document.getElementById('trigger').addEventListener('click', () => {
-      const wave = document.getElementById('waveform');
-      if (wave.style.display === 'none') {
-        wave.style.display = 'block';
-        waveform.play();
-      } else {
-        wave.style.display = 'none';
-        waveform.pause();
-      }
+      const audioBox = document.getElementById('audio-container');
+      audioBox.style.display = audioBox.style.display === 'none' ? 'block' : 'none';
     });
   </script>
-</head>
+</body>
 </html>
